@@ -23,9 +23,9 @@ namespace MonopolyTestTask
             if (CheckBox(box))
             {
                 BoxList.Add(box);
-                weight = GetWeightAllBoxAndPallet();
-                dateShelfLife = PalletShelfLife();
-                size = getSizeAllBoxAndPallet();
+                this.weight = GetWeightAllBoxAndPallet();
+                this.dateShelfLife = PalletShelfLife();
+                this.size = getSizeAllBoxAndPallet();
             }
             else
             {
