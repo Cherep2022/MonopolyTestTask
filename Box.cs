@@ -1,4 +1,5 @@
-﻿namespace MonopolyTestTask
+﻿
+namespace MonopolyTestTask
 {
     public class Box
     {
@@ -10,20 +11,31 @@
         public int size { get; set; }
         public DateTime dateShelfLife { get; set; }
         public DateTime dateOfProduction { get; set; }
-        public Box()
+
+        protected Box()
         {
-            id = GetId();
+            
         }
-        public int GetSizeBox()
+        public Box(int height, int width, int depth)
         {
-            if (width > 0 && height > 0 && depth > 0)
-                return width * height * depth;
-            else throw new Exception("Не удалось посчитать объем коробки, ширина глубина и высота должны быть больше нуля.");
+            this.height = height;
+            this.width = width;
+            this.depth = depth;
+
+            this.id = GetId();
+            this.size = GetSizeBox();
         }
         int GetId()
         {
             BoxIdIncrement.getInstance().boxId++;
+
             return BoxIdIncrement.getInstance().boxId;
+        }
+        int GetSizeBox()
+        {
+            if (width > 0 && height > 0 && depth > 0)
+                return width * height * depth;
+            else throw new Exception("Не удалось посчитать объем коробки, ширина глубина и высота должны быть больше нуля.");
         }
     }
 }
