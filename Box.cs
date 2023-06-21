@@ -22,8 +22,8 @@ namespace MonopolyTestTask
             this.width = width;
             this.depth = depth;
 
-            this.id = GetId();
-            this.size = GetSizeBox();
+            id = GetId();
+            size = GetSizeBox();
         }
         int GetId()
         {
