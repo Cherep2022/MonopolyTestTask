@@ -5,11 +5,11 @@ namespace MonopolyTestTask
     {
         public readonly List<Box> BoxList;
 
-        public Pallet(int height, int width, int depth) : base()
+        public Pallet(int id, int height, int width, int depth) : base()
         {
             BoxList = new List<Box>();
 
-            this.id = GetId();            
+            this.id = id;            
             this.width = width;
             this.depth = depth;
             this.height = height;
@@ -138,12 +138,6 @@ namespace MonopolyTestTask
             }
 
             return palletWeight;
-        }
-        int GetId()
-        {
-            PalletIdIncrement.getInstance().palletId++;
-
-            return PalletIdIncrement.getInstance().palletId;
         }
     }
 }

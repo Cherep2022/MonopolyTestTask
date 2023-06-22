@@ -16,20 +16,14 @@ namespace MonopolyTestTask
         {
             
         }
-        public Box(int height, int width, int depth)
+        public Box(int id,int height, int width, int depth)
         {
             this.height = height;
             this.width = width;
             this.depth = depth;
 
-            id = GetId();
+            this.id = id;
             size = GetSizeBox();
-        }
-        int GetId()
-        {
-            BoxIdIncrement.getInstance().boxId++;
-
-            return BoxIdIncrement.getInstance().boxId;
         }
         int GetSizeBox()
         {
