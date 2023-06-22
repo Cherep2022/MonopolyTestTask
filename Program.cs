@@ -15,8 +15,8 @@ namespace MonopolyTestTask
             Console.ResetColor();
 
             Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
-            CreatPallets creatPallets = new CreatPallets(Path.GetFullPath("Pallet.xlsx"));
-            CreatBox creatBox = new CreatBox(Path.GetFullPath("Box.xlsx"));
+            CreatPallets creatPallets = new CreatPallets(Path.GetFullPath("ExcelFile/Pallet.xlsx"));
+            CreatBox creatBox = new CreatBox(Path.GetFullPath("ExcelFile/Box.xlsx"));
             creatBox.addBoxIntoPallet(creatPallets.pallets);
 
             var printData = new PrintData();
