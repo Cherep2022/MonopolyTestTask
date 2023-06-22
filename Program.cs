@@ -9,6 +9,10 @@ namespace MonopolyTestTask
     {
         static void Main(string[] args)
         {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("Чтение входных данных из файла");
+            Console.WriteLine( );
+            Console.ResetColor();
 
             Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
             CreatPallets creatPallets = new CreatPallets(Path.GetFullPath("Pallet.xlsx"));
@@ -19,10 +23,14 @@ namespace MonopolyTestTask
             printData.PrintOneTask(creatPallets.pallets);
             printData.PrintTwoTask(creatPallets.pallets);
 
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("Генерация входных данных");
+            Console.WriteLine();
+            Console.ResetColor();
 
-            //var pallets = new InputData().AddTestDate();gv
-            //printData.PrintOneTask(pallets);
-            //printData.PrintTwoTask(pallets);
+            var pallets = new InputData().AddTestDate();
+            printData.PrintOneTask(pallets);
+            printData.PrintTwoTask(pallets);
         }
     }
 }
