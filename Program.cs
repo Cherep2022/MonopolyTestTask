@@ -24,7 +24,7 @@ namespace MonopolyTestTask
             printData.PrintTwoTask(creatPallets.pallets);
 
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("Генерация входных данных");
+            Console.WriteLine("Генерация входных данных в приле");
             Console.WriteLine();
             Console.ResetColor();
 
