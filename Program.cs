@@ -31,6 +31,8 @@ namespace MonopolyTestTask
             var pallets = new InputData().AddTestDate();
             printData.PrintOneTask(pallets);
             printData.PrintTwoTask(pallets);
+
+            new WritePalletsIntoExcelFIle(Path.GetFullPath("ExcelFile/Result.xlsx")).WritePallets(pallets);
         }
     }
 }
